@@ -44,8 +44,8 @@ According to the diagram, the number of recipes in each category increases as n_
 <br />
 
 ### Interesting Aggregates
-To explore the relationship between number of steps it take to make the food('n_steps') and the average rating, I have grouped and labeled recipe with average rating that fall in range [0,1] (including on both side as [0,1]), recipe with average rating that fall in (1,2] (including 2 but excluding 1) as (1,2] and  same for (2,3], (3,4], (4,5]. <br />
-Also for step range, I label each n_step as [0,20], (20,40], [40,60), [60,80), (80,100]. Then we created the pivot table as shown below with average rating range as columns and step range as index for rows. Each values indicate the percentage of data in each step range fall into each average rating range individually. <br />
+To explore the relationship between number of steps it take to make the food('n_steps') and the average rating, I have grouped and labeled recipe with average rating that fall in range [0,1] (including on both side as [0,1]), recipe with average rating that fall in (1,2] (including 2 but excluding 1) as (1,2] and  same for (2,3], (3,4], (4,5]. <br /><br />
+Also for step range, I label each n_step as [0,20], (20,40], [40,60), [60,80), (80,100]. Then we created the pivot table as shown below with average rating range as columns and step range as index for rows. Each values indicate the percentage of data in each step range fall into each average rating range individually. <br /><br />
 Each row sum up to 100% and to avoid biases that may be introduced by the missingness, we also drop the nan values in the average rating column, leaving all valid average rating. 
 <br />
 
