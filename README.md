@@ -43,6 +43,19 @@ According to the diagram, the number of recipes in each category increases as n_
 <iframe src="assets/n_ingredients_distribution.html" width=800 height=600 frameBorder=0></iframe>
 <br />
 
+###Bivariate Analysis
+In this section, we explore more about the correlation of n_steps / n_ingredients with average rating. Because the average ratings include many different floats and make the diagram hard to observe, we round the average ratings to its nearest integer.<br />
+1.Average Rating vs Step Number<br />
+This is the box plot with average rating on the x-axis and n_steps on the y-axis. We observe that for each category of ratings(1,2,3,4,5), interquartile range of its corresponding steps are from 6 to 15. Also, the minimum to maximum n_steps is from 1 to 25 for each of the ratings. Therefore, given a recipe with n_steps from 1 to 25, it is hard to estimate a average rating for it. However,there are also many outliers in this plot, especially for the rating of 5 category. The plot suggests that a recipe with n_steps from 40 to 60, it is more likely to fall in the rating 4 or 5. If a recipe has step number over 60, it is very likely fall in the rating 5. Since there are only a few recipes with number over 60, these data may not be representative enough to predict the rating.
+
+<iframe src="assets/n_step_box.html" width=800 height=600 frameBorder=0></iframe>
+<br />
+2.Average Rating vs Ingredient Number<br />
+This is the box plot with average rating on the x-axis and n_ingredients on the y-axis. We observe that for each category of ratings(1,2,3,4,5), interquartile range of its corresponding ingredients are from 6 to 12. Also, the minimum to maximum n_ingredients is from 1 to 20 for each of the ratings. Therefore, given a recipe with n_ingredients from 1 to 20, it is hard to estimate a average rating for it. However,there are also some outliers in this plot.  The plot suggests that a recipe with n_ingredients over 30 only falls in rating of 5. Thus, if given a recipe with n_ingredients over 30, it is more likely to have an average rating of 5.
+
+<iframe src="assets/n_ingredients_box.html" width=800 height=600 frameBorder=0></iframe>
+<br />
+
 ### Interesting Aggregates
 To explore the relationship between number of steps it take to make the food('n_steps') and the average rating, I have grouped and labeled recipe with average rating that fall in range [0,1] (including on both side as [0,1]), recipe with average rating that fall in (1,2] (including 2 but excluding 1) as (1,2] and  same for (2,3], (3,4], (4,5]. <br /><br />
 Also for step range, I label each n_step as [0,20], (20,40], [40,60), [60,80), (80,100]. Then we created the pivot table as shown below with average rating range as columns and step range as index for rows. Each values indicate the percentage of data in each step range fall into each average rating range individually. <br /><br />
