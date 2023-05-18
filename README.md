@@ -27,14 +27,17 @@ The first five rows of the cleaned dataframe are as below:
 | 412 broccoli casserole               | 306168 |        40 |         6 |               9 |                5 |          194.8 |                20 |             6 |             32 |              22 |                    36 |                     3 |
 
 ### Interesting Aggregates
+To explore the relationship between number of steps it take to make the food('n_step
 Pivot table
-| step range  rating range  |   (1,2] |   (2,3] |   (3,4] |   (4,5] |   [0,1] |   nan |
+| step range rating range  |   (1,2] |   (2,3] |   (3,4] |   (4,5] |   [0,1] |   nan |
 |:-------------|--------:|--------:|--------:|--------:|--------:|------:|
-| (20,40]      |      68 |     245 |    1245 |   10968 |      50 |   251 |
-| (40,60]      |       1 |       8 |      52 |     914 |       2 |    24 |
-| (60,80]      |     nan |       1 |       1 |      85 |     nan |     3 |
-| (80,100]     |     nan |       1 |       1 |      31 |     nan |     2 |
-| [20,0]       |     720 |    3714 |   22108 |  190792 |     645 |  2497 |
+| [20,0]       |     586 |    2537 |   12877 |   59681 |     548 |  2354 |
+| (20,40]      |      52 |     145 |     747 |    3705 |      39 |   231 |
+| (40,60]      |       1 |       6 |      23 |     187 |       2 |    20 |
+| (60,80]      |     nan |       1 |       1 |      25 |     nan |     3 |
+| (80,100]     |     nan |       1 |       1 |       8 |     nan |     1 |
+
+
 ---
 ## Assessment of Missingness
 <iframe src="assets/rating-n_steps.html" width=800 height=600 frameBorder=0></iframe>
