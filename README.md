@@ -59,7 +59,7 @@ Each row sum up to 100% and to avoid biases that may be introduced by the missin
 
 <br />
 This pivot table give a good representation of the average rating distribution for each step range interval becasue instead of looking at the number of recipe fall in these ranges, we use the percentage which eliminate the potential biases caused by population differences(the total recipes number in certain step range is more than others).<br /><br />
-By looking at the table, we can see that recipe with step between 60-80 tended to have higher rating since more than 92 percent of these recipe have average rating between 4 and 5 with 0% percent that fall in average rating between 0-2. 
+By looking at the table, we observed that recipes with step between 60-80 tend to have higher rating since more than 92 percent of these recipe have average rating between 4 and 5 with 0% percent that fall in average rating between 0-2. Morover, the distribution of average rating for step range (60,80] is different than others, with a tendency to fall in higher average rating. However, this observation is needed to be supported using statistical analysis tools. 
 
 ---
 ## Assessment of Missingness
@@ -68,6 +68,14 @@ By looking at the table, we can see that recipe with step between 60-80 tended t
 ---
 
 ## Hypothesis Testing
+What we have explored in the pivot table suggests that recipes with step between 60-80 tended to have higher rating, in this section, we would perform hypothesis test to test if this observation is small probability event.<br />
+Null hypothesis: the distribution of average rating(range 0-1, 1-2, 2-3, 3-4, 4-5) for receipes with steps between 60-80 is sampled from the population
+<br />
+Alternative hypothesis: the distribution of average rating(range 0-1, 1-2, 2-3, 3-4, 4-5) for receipes with steps between 60-80 is not sampled from the population
+<br />
+We first calculated the distribution of average ratings for the population and also for the sample(recipe with step between 60-80), perfomed tvd as our test statistic to get the difference between distribution of the two, and then conducted 100,000 trials, generating based on the disctibution for the population to see if the observed distribution difference in the pivot table for recipes with step between 60-80 is due to random chance.
+<br />
+The significant level we picked for our test is 0.01 to make our result more robust and the p-value we got from the testing is 0.0 which imply that we reject the null hypothesis. The hypothesis test suggest that the distirbution of average rating for recipes with steps between 60-80 is not sampled from the population which imply that the observation in the pivot table may not be result due to random chance, however, it does not indicate a definite relationship between number of steps and average rating.  
 
 
 ---
