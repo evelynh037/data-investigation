@@ -26,6 +26,10 @@ The first five rows of the cleaned dataframe are as below:
 | 412 broccoli casserole               | 306168 |        40 |         6 |               9 |                5 |          194.8 |                20 |             6 |             32 |              22 |                    36 |                     3 |
 | 412 broccoli casserole               | 306168 |        40 |         6 |               9 |                5 |          194.8 |                20 |             6 |             32 |              22 |                    36 |                     3 |
 
+
+### Univariate Analysis
+
+
 ### Interesting Aggregates
 To explore the relationship between number of steps it take to make the food('n_step
 Pivot table
