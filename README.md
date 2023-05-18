@@ -45,6 +45,7 @@ According to the diagram, the number of recipes in each category increases as n_
 
 ### Bivariate Analysis
 In this section, we explore more about the correlation of n_steps / n_ingredients with average rating. Because the average ratings include many different floats and make the diagram hard to observe, we round the average ratings to its nearest integer.<br />
+<br />
 1.Average Rating vs Step Number<br />
 This is the box plot with average rating on the x-axis and n_steps on the y-axis. We observe that for each category of ratings(1,2,3,4,5), interquartile range of its corresponding steps are from 6 to 15. Also, the minimum to maximum n_steps is from 1 to 25 for each of the ratings. Therefore, given a recipe with n_steps from 1 to 25, it is hard to estimate a average rating for it. However,there are also many outliers in this plot, especially for the rating of 5 category. The plot suggests that a recipe with n_steps from 40 to 60, it is more likely to fall in the rating 4 or 5. If a recipe has step number over 60, it is very likely fall in the rating 5. Since there are only a few recipes with number over 60, these data may not be representative enough to predict the rating.
 
