@@ -42,16 +42,17 @@ According to the diagram, the number of recipes in each category increases as n_
 <br />
 
 ### Interesting Aggregates
-To explore the relationship between number of steps it take to make the food('n_step
-Pivot table
-| step range rating range  |   (1,2] |   (2,3] |   (3,4] |   (4,5] |   [0,1] |   nan |
-|:-------------|--------:|--------:|--------:|--------:|--------:|------:|
-| [20,0]       |     586 |    2537 |   12877 |   59681 |     548 |  2354 |
-| (20,40]      |      52 |     145 |     747 |    3705 |      39 |   231 |
-| (40,60]      |       1 |       6 |      23 |     187 |       2 |    20 |
-| (60,80]      |     nan |       1 |       1 |      25 |     nan |     3 |
-| (80,100]     |     nan |       1 |       1 |       8 |     nan |     1 |
+To explore the relationship between number of steps it take to make the food('n_steps') and the average rating, I have grouped and labeled recipe with average rating that fall in range [0,1] (including on both side as [0,1]), recipe with average rating that fall in (1,2] (including 2 but excluding 1) as (1,2] and  same for (2,3], (3,4], (4,5]. Also for step range, I label each n_step as [0,20], (20,40], [40,60), [60,80), (80,100]. Then we created the pivot table as shown below with average rating range as columns and step range as index for rows. Each values indicate the percentage of data in each step range fall into each average rating range individually. Each row sum up to 100% and to avoid biases that may be introduced by the missingness, we also drop the nan values in the average rating column, leaving all valid average rating. <br /><br />
+| step range   |      (1,2] |      (2,3] |     (3,4] |    (4,5] |      [0,1] |
+|:-------------|-----------:|-----------:|----------:|---------:|-----------:|
+| (20,40]      | 0.0050557  | 0.0193659  | 0.1       | 0.871979 | 0.00359897 |
+| (40,60]      | 0.00120919 | 0.00846433 | 0.0544135 | 0.933495 | 0.00241838 |
+| (60,80]      | 0          | 0.012987   | 0.012987  | 0.974026 | 0          |
+| (80,100]     | 0          | 0.04       | 0.04      | 0.92     | 0          |
+| [0,20]       | 0.00324961 | 0.0167751  | 0.101391  | 0.87578  | 0.00280472 | <br /><br />
 
+This pivot table give a good representation of the average rating distribution for each step range interval becasue instead of looking at the number of recipe fall in these ranges, we use the percentage which eliminate the potential biases caused by population differences(the total recipes number in certain step range is more than others).<br /><br />
+By looking at the table, we can see that recipe with step between 60-80 tended to have higher rating since more than 97.4 percent of these recipe have average rating between 4 and 5. 
 
 ---
 ## Assessment of Missingness
