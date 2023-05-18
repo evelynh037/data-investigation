@@ -30,11 +30,13 @@ The first five rows of the cleaned dataframe are as below:
 ### Univariate Analysis
 In this section, we choose to visualize the distributions of two variables: number of steps and number of ingredients.<br />
 <br />
-####1.Distribution of Steps Number(n_steps)
+1.Distribution of Steps Number(n_steps)
 According to the diagram, the number of recipes increases in each category as n_steps increases from 1 to 7 and decreases from 7 to 40. Most of the recipes falls in the n_steps range from 1 to 20, and n_steps 7 has the highest count, about 7000. Only very few recipes have n_steps from 40 to 100.
 <iframe src="assets/n_steps_distribution.html" width=800 height=600 frameBorder=0></iframe>
 <br />
-####2.Distribution of Ingredients Number(n_ingredients)
+<br />
+<br />
+2.Distribution of Ingredients Number(n_ingredients)
 According to the diagram, the number of recipes in each category increases as n_ingredients increases from 1 to 8 and decreases from 8 to 20. Most of the recipes falls in the n_ingredients range from 1 to 20, and n_ingredients 8 has the highest count, about 9000. Only very few recipes have n_ingredients from 20 to 35.
 <iframe src="assets/n_ingredients_distribution.html" width=800 height=600 frameBorder=0></iframe>
 <br />
