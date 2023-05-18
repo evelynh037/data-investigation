@@ -37,7 +37,7 @@ Pivot table
 | [20,0]       |     720 |    3714 |   22108 |  190792 |     645 |  2497 |
 ---
 ## Assessment of Missingness
-
+<iframe src="assets/rating-n_steps.html" width=800 height=600 frameBorder=0></iframe>
 
 ---
 
