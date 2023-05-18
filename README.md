@@ -19,6 +19,7 @@ To explore the question using different analysis tool, data cleaning is needed o
 •Second step: we prep our data for further analysis by looking at the types of each columns and identifying which column is need to be typecasted. We found that type casting is needed to be applied on column 'nutrition' since they are string representation of a list with nutrition info like calories, sugar etc as elements. We then extrated these elements from 'nutrition' column, split them and make a new column for each nutrition info in our dataframe. For each new column, we typecasted them into 'float' for further analysis. After getting all info out of the 'nutrition' column, we dropped the column to make the dataframe less redundant.<br /><br />
 The first five rows of the cleaned dataframe are as below: 
 <br />
+
 |    | name                                 |     id |   minutes |   n_steps |   n_ingredients |   rating |   Average_rating |   calories (#) |   total fat (PDV) |   sugar (PDV) |   sodium (PDV) |   protein (PDV) |   saturated fat (PDV) |   carbohydrates (PDV) | rating range   | step range   | rating_missing   |
 |---:|:-------------------------------------|-------:|----------:|----------:|----------------:|---------:|-----------------:|---------------:|------------------:|--------------:|---------------:|----------------:|----------------------:|----------------------:|:---------------|:-------------|:-----------------|
 |  0 | 1 brownies in the world    best ever | 333281 |        40 |        10 |               9 |        4 |                4 |          138.4 |                10 |            50 |              3 |               3 |                    19 |                     6 | (3,4]          | [0,20]       | False            |
@@ -43,7 +44,8 @@ According to the diagram, the number of recipes in each category increases as n_
 
 ### Interesting Aggregates
 To explore the relationship between number of steps it take to make the food('n_steps') and the average rating, I have grouped and labeled recipe with average rating that fall in range [0,1] (including on both side as [0,1]), recipe with average rating that fall in (1,2] (including 2 but excluding 1) as (1,2] and  same for (2,3], (3,4], (4,5]. Also for step range, I label each n_step as [0,20], (20,40], [40,60), [60,80), (80,100]. Then we created the pivot table as shown below with average rating range as columns and step range as index for rows. Each values indicate the percentage of data in each step range fall into each average rating range individually. Each row sum up to 100% and to avoid biases that may be introduced by the missingness, we also drop the nan values in the average rating column, leaving all valid average rating. 
-<br /><br />
+<br />
+
 | step range   |      (1,2] |      (2,3] |     (3,4] |    (4,5] |      [0,1] |
 |:-------------|-----------:|-----------:|----------:|---------:|-----------:|
 | (20,40]      | 0.0050557  | 0.0193659  | 0.1       | 0.871979 | 0.00359897 |
@@ -52,7 +54,7 @@ To explore the relationship between number of steps it take to make the food('n_
 | (80,100]     | 0          | 0.04       | 0.04      | 0.92     | 0          |
 | [0,20]       | 0.00324961 | 0.0167751  | 0.101391  | 0.87578  | 0.00280472 |
 
-
+<br />
 This pivot table give a good representation of the average rating distribution for each step range interval becasue instead of looking at the number of recipe fall in these ranges, we use the percentage which eliminate the potential biases caused by population differences(the total recipes number in certain step range is more than others).<br /><br />
 By looking at the table, we can see that recipe with step between 60-80 tended to have higher rating since more than 97.4 percent of these recipe have average rating between 4 and 5. 
 
