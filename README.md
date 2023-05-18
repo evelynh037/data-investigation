@@ -73,9 +73,13 @@ Null hypothesis: the distribution of average rating(range 0-1, 1-2, 2-3, 3-4, 4-
 <br />
 Alternative hypothesis: the distribution of average rating(range 0-1, 1-2, 2-3, 3-4, 4-5) for receipes with steps between 60-80 is not sampled from the population
 <br />
-We first calculated the distribution of average ratings for the population and also for the sample(recipe with step between 60-80), perfomed tvd as our test statistic to get the difference between distribution of the two, and then conducted 100,000 trials, generating based on the disctibution for the population to see if the observed distribution difference in the pivot table for recipes with step between 60-80 is due to random chance.
+We first calculated the distribution of average ratings for the population and also for the sample(recipe with step between 60-80), perfomed tvd as our test statistic to get the difference between distribution of the two, and then conducted 100,000 trials, generating based on the disctibution for the population to see if the observed distribution difference in the pivot table for recipes with step between 60-80 is due to random chance. 
 <br />
-The significant level we picked for our test is 0.01 to make our result more robust and the p-value we got from the testing is 0.0 which imply that we reject the null hypothesis. The hypothesis test suggest that the distirbution of average rating for recipes with steps between 60-80 is not sampled from the population which imply that the observation in the pivot table may not be result due to random chance, however, it does not indicate a definite relationship between number of steps and average rating.  
+The significant level we picked for our test is 0.01 to make our result more robust
+<br />
+<iframe src="assets/hypothesis_testing.html" width=800 height=600 frameBorder=0></iframe>
+<br />
+The p-value we got from the testing is 0.0 which imply that we reject the null hypothesis. The hypothesis test suggest that the distirbution of average rating for recipes with steps between 60-80 is not sampled from the population which imply that the observation in the pivot table may not be result due to random chance, however, it does not indicate a definite relationship between number of steps and average rating.  
 
 
 ---
