@@ -50,6 +50,13 @@ To explore the relationship between number of steps it take to make the food('n_
 | (60,80]      | 0          | 0.012987   | 0.012987  | 0.974026 | 0          |
 | (80,100]     | 0          | 0.04       | 0.04      | 0.92     | 0          |
 | [0,20]       | 0.00324961 | 0.0167751  | 0.101391  | 0.87578  | 0.00280472 | <br /><br />
+| Quarter     |   Count |
+|:------------|--------:|
+| Fall 2020   |       3 |
+| Winter 2021 |       2 |
+| Spring 2021 |       6 |
+| Summer 2021 |       4 |
+| Fall 2021   |      55 |
 
 This pivot table give a good representation of the average rating distribution for each step range interval becasue instead of looking at the number of recipe fall in these ranges, we use the percentage which eliminate the potential biases caused by population differences(the total recipes number in certain step range is more than others).<br /><br />
 By looking at the table, we can see that recipe with step between 60-80 tended to have higher rating since more than 97.4 percent of these recipe have average rating between 4 and 5. 
