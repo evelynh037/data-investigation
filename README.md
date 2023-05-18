@@ -77,7 +77,7 @@ We first calculated the distribution of average ratings for the population and a
 <br />
 The significant level we picked for our test is 0.01 to make our result more robust
 <br />
-<iframe src="assets/hypothesis_testing.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/hypothesis_testing.html" width=800 height=600 frameBorder=0></iframe> <br />
 <br />
 The p-value we got from the testing is 0.0 which imply that we reject the null hypothesis. The hypothesis test suggest that the distirbution of average rating for recipes with steps between 60-80 is not sampled from the population which imply that the observation in the pivot table may not be result due to random chance, however, it does not indicate a definite relationship between number of steps and average rating.  
 
