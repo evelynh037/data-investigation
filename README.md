@@ -67,13 +67,13 @@ Also for step range, I label each n_step as [0,20], (20,40], [40,60), [60,80), (
 Each row sum up to 100% and to avoid biases that may be introduced by the missingness, we also drop the nan values in the average rating column, leaving all valid average rating. 
 <br />
 
-| step range   |      (1,2] |     (2,3] |    (3,4] |    (4,5] |      [0,1] |
+| step range   |      [0,1] |     (1,2] |    (2,3] |    (3,4] |      [4,5] |
 |:-------------|-----------:|----------:|---------:|---------:|-----------:|
-| (20,40]      | 0.0111622  | 0.0308601 | 0.159991 | 0.790107 | 0.00787919 |
-| (40,60]      | 0.00490196 | 0.0245098 | 0.102941 | 0.857843 | 0.00980392 |
-| (60,80]      | 0          | 0.04      | 0.04     | 0.92     | 0          |
-| (80,100]     | 0          | 0.1       | 0.1      | 0.8      | 0          |
-| [0,20]       | 0.00753534 | 0.0331022 | 0.169045 | 0.783396 | 0.00692185 |
+| [0,20]       | 0.00692185 | 0.00753534| 0.0331022| 0.169045 | 0.783396   |
+| (20,40]      | 0.00787919 | 0.0111622 | 0.0308601| 0.159991 | 0.790107   |
+| (40,60]      | 0.00980392 | 0.00490196| 0.0245098| 0.102941 | 0.857843   |
+| (60,80]      | 0          | 0         | 0.04     | 0.04     | 0 .92      |
+| [80,100      | 0          | 0         | 0.1      | 0.169845 | 0.8        |
 
 <br />
 This pivot table give a good representation of the average rating distribution for each step range interval becasue instead of looking at the number of recipe fall in these ranges, we use the percentage which eliminate the potential biases caused by population differences(the total recipes number in certain step range is more than others).<br /><br />
@@ -125,11 +125,11 @@ The p_value is 0.114 > 0.05, so it is not statistically significant. Thus, we fa
 
 ## Hypothesis Testing
 What we have explored in the pivot table suggests that recipes with step between 60-80 tended to have higher rating, in this section, we would perform hypothesis test to test if this observation is small probability event.<br />
-Null hypothesis: the distribution of average rating(range 0-1, 1-2, 2-3, 3-4, 4-5) for receipes with steps between 60-80 is sampled from the population
+Null hypothesis: the distribution of average rating(range [0-1], (1-2], (2-3], (3-4], (4-5]) for receipes with steps between 60-80 is sampled from the population
 <br />
 Alternative hypothesis: the distribution of average rating(range 0-1, 1-2, 2-3, 3-4, 4-5) for receipes with steps between 60-80 is not sampled from the population
 <br />
-We first calculated the distribution of average ratings for the population and also for the sample(recipe with step between 60-80), perfomed tvd as our test statistic to get the difference between distribution of the two, and then conducted 100,000 trials, generating based on the disctibution for the population to see if the observed distribution difference in the pivot table for recipes with step between 60-80 is due to random chance. 
+We first calculated the distribution of average ratings for the population and also for the sample(recipe with step between 60-80), perfomed TVD as our test statistic to get the difference between distribution of the two, and then conducted 10,000 trials, generating based on the disctibution for the population to see if the observed distribution difference in the pivot table for recipes with step between 60-80 is due to random chance. 
 <br />
 The significant level we picked for our test is 0.01 to make our result more robust
 <br />
