@@ -99,7 +99,19 @@ According to the diagram, two distributions are quantitative and look like shift
 <br />
 The p_value is 0.0 < 0.05, so it is statistically significant. Thus, null hypothesis is rejected.
 
-
+2.Rating Missingness & minutes <br />
+<br />
+Null Hypothesis: the distribution of 'minutes' when 'rating' is missing is the same as the distribution of 'minutes' when 'rating' is not missing.<br />
+Alternative Hypothesis: the distribution of 'minutes' when 'rating' is missing is the different from the distribution of 'minutes' when 'rating' is not missing.<br />
+<br />
+First, we derive the distribution of 'minutes' of whether 'rating' is missing. The blue line (False) plots the the distribution of 'minutes' of whether 'rating' is not missing, and the red line stands for the distribution when it is missing.<br />
+<iframe src="assets/rating_miss_min.html" width=800 height=600 frameBorder=0></iframe>
+<br />
+According to the diagram, two distributions are quantitative and seem to be overlapped with each other. We use the difference in group means as test statistic. After permutation, we get the diagram below, showing the empirical distribution of differences in minutes means when rating is missing or not. The red line is the observed test statistic, which is the observed difference in n_steps means groupby rating missing. <br />
+<iframe src="assets/rating_miss_min_means.html" width=800 height=600 frameBorder=0></iframe>
+<br />
+The p_value is 0.114 > 0.05, so it is not statistically significant. Thus, we fail to reject the null hypothesis.
+<br />
 ---
 
 ## Hypothesis Testing
