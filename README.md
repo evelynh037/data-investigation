@@ -135,7 +135,6 @@ The significant level we picked for our test is 0.01 to make our result more rob
 <iframe src="assets/hypothesis_testing.html" width=800 height=600 frameBorder=0></iframe> <br />
 <br />
 <br />
-<br />
 The p-value we got is 0.0 which imply that we are rejecting the null hypothesis, meaning that there is not enough statistical evidence to infer that the null hypothesis is true. Therefore, the hypothesis test suggest that the distirbution of average rating for recipes with steps between 60-80 is not sampled from the population. This imply that the observation we have in the pivot table may not be result due to random chance and recipes with steps between 60-80 is likely to have different distribution. Combining all observation and test result, we conclude that recipes with steps between 60-80 is more likely to have higher avaerage ratings. <br />
 
 
