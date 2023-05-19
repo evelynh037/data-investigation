@@ -81,7 +81,24 @@ By looking at the table, we observed that recipes with step between 60-80 tend t
 
 ---
 ## Assessment of Missingness
-<iframe src="assets/rating-n_steps.html" width=800 height=600 frameBorder=0></iframe>
+
+
+### Missingness Dependency
+In this section, we investigate the missingness of rating provided by the users. We choose to use rating instead of average rating because each element represent for a datum submitted by a user. We set the significance level at 0.05.<br />
+<br />
+1.Rating Missingness & n_steps <br />
+<br />
+Null Hypothesis: the distribution of 'n_steps' when 'rating' is missing is the same as the distribution of 'n_steps' when 'rating' is not missing.<br />
+Alternative Hypothesis: the distribution of 'n_steps' when 'rating' is missing is the different from the distribution of 'n_steps' when 'rating' is not missing.<br />
+<br />
+First, we derive the distribution of 'n_step' of whether 'rating' is missing. The blue line (False) plots the the distribution of 'n_step' of whether 'rating' is not missing, and the red line stands for the distribution when it is missing.<br />
+<iframe src="assets/rating_miss_steps.html" width=800 height=600 frameBorder=0></iframe>
+<br />
+According to the diagram, two distributions are quantitative and look like shifted versions of the same basic shape, so we use the difference in group means as test statistic. After permutation, we get the diagram below, showing the empirical distribution of differences in n_steps means when rating is missing or not. The red line is the observed test statistic, which is the observed difference in n_steps means groupby rating missing. <br />
+<iframe src="assets/rating_miss_steps_means.html" width=800 height=600 frameBorder=0></iframe>
+<br />
+The p_value is 0.0 < 0.05, so it is statistically significant. Thus, null hypothesis is rejected.
+
 
 ---
 
