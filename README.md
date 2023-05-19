@@ -81,6 +81,12 @@ By looking at the table, we observed that recipes with step between 60-80 tend t
 
 ---
 ## Assessment of Missingness
+Since in the data cleaning process, we dropped duplicated rows(rows with identical recipe) to explore the question we have. However, by doing this, we potentially dropped rows with nan values in columns that should not be excluded when accessing the missingness relationship. Therefore, in this section, we would use the cleaned dataframe without dropping the duplicates (dataframe without performing Step Three) to take in account of every nan values for accuracy purposes. <br />
+
+### NMAR Analysis
+One column with missingness we found that could be NMAR is the "description" column.<br />
+By putting description for recipes for their recipes, the recipe creater can introduce and provide more information about what their dishes is like. One NMAR explantion for missingness existed in "description" column could be that the dishes is too commonly known among people. One example is french fries. Even without description, people would know what french fries is and that recipe they are looking at, therefore, the recipe creater may leave it blank due to the reason that the desctiption if they ought to put is too obvious and may seem useless. <br />
+Another case could be the dish is too uncommonly known which required many inforamtion or the description is too complicated if they ought to have one. Therefore, they may leave it blank as the description would be more lengthy and redundant than the recipe itself.<br />
 
 
 ### Missingness Dependency
@@ -128,7 +134,7 @@ The significant level we picked for our test is 0.01 to make our result more rob
 <br />
 <br />
 <br />
-The p-value we got from the testing is 0.0 which imply that we reject the null hypothesis. The hypothesis test suggest that the distirbution of average rating for recipes with steps between 60-80 is not sampled from the population which imply that the observation in the pivot table may not be result due to random chance, however, it does not indicate a definite relationship between number of steps and average rating.  
+The p-value we got is 0.0 which imply that we are rejecting the null hypothesis, meaning that there is not enough statistical evidence to infer that the null hypothesis is true. Therefore, the hypothesis test suggest that the distirbution of average rating for recipes with steps between 60-80 is not sampled from the population. This imply that the observation we have in the pivot table may not be result due to random chance and recipes with steps between 60-80 is likely to have different distribution. Combining all observation and test result, we conclude that recipes with steps between 60-80 is more likely to have higher avaerage ratings. <br />
 
 
 ---
