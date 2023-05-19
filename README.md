@@ -38,7 +38,6 @@ According to the diagram, the number of recipes increases in each category as n_
 <iframe src="assets/n_steps_distribution.html" width=800 height=600 frameBorder=0></iframe>
 <br />
 <br />
-<br />
 2.Distribution of Ingredients Number(n_ingredients)<br />
 <br />
 According to the diagram, the number of recipes in each category increases as n_ingredients increases from 1 to 8 and decreases from 8 to 20. Most of the recipes falls in the n_ingredients range from 1 to 20, and n_ingredients 8 has the highest count, about 9000. Only very few recipes have n_ingredients from 20 to 35.
