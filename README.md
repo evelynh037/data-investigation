@@ -87,6 +87,7 @@ Since in the data cleaning process, we dropped duplicated rows(rows with identic
 One column with missingness we found that could be NMAR is the "description" column.<br />
 By putting description for recipes for their recipes, the recipe creater can introduce and provide more information about what their dishes is like. One NMAR explantion for missingness existed in "description" column could be that the dishes is too commonly known among people. One example is french fries. Even without description, people would know what french fries is and that recipe they are looking at, therefore, the recipe creater may leave it blank due to the reason that the desctiption if they ought to put is too obvious and may seem useless. <br />
 Another case could be the dish is too uncommonly known which required many inforamtion or the description is too complicated if they ought to have one. Therefore, they may leave it blank as the description would be more lengthy and redundant than the recipe itself.<br />
+The additional information that is required to explain the missingness could be "popularity“ which indicate the level of familiarity people are with the dishes(from 1 to 5), thereby make the missingness MAR for "description" column if we ought to add this since if our reasoning is correct, most of missing data would be clustered on level 1 or 5.
 
 
 ### Missingness Dependency
