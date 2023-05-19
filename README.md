@@ -127,7 +127,7 @@ The p_value is 0.114 > 0.05, so it is not statistically significant. Thus, we fa
 What we have explored in the pivot table suggests that recipes with step between 60-80 tended to have higher rating, in this section, we would perform hypothesis test to test if this observation is small probability event.<br />
 Null hypothesis: the distribution of average rating(range [0-1], (1-2], (2-3], (3-4], (4-5]) for receipes with steps between 60-80 is sampled from the population
 <br />
-Alternative hypothesis: the distribution of average rating(range 0-1, 1-2, 2-3, 3-4, 4-5) for receipes with steps between 60-80 is not sampled from the population
+Alternative hypothesis: the distribution of average rating(range [0-1], (1-2], (2-3], (3-4], (4-5]) for receipes with steps between 60-80 is not sampled from the population
 <br />
 We first calculated the distribution of average ratings for the population and also for the sample(recipe with step between 60-80), perfomed TVD as our test statistic to get the difference between distribution of the two, and then conducted 10,000 trials, generating based on the disctibution for the population to see if the observed distribution difference in the pivot table for recipes with step between 60-80 is due to random chance. 
 <br />
